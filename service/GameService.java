@@ -8,7 +8,6 @@ public class GameService {
     public static void guessNumber(int rn, int range, Scanner sc) {
 
         int count = 0;
-        
 
         while (true) {
 
@@ -24,7 +23,7 @@ public class GameService {
             boolean isValide = utils.InputValidator.isGuessNumInRange(guessNum, range);
             if (!isValide) {
                 System.out.println("......ENTER NUMBER BETWEEN 1 AND " + range + ".......");
-                break;
+                continue;
             }
             count++;
 

@@ -1,5 +1,6 @@
 package utils;
 
+ 
 public class InputValidator {
     public static boolean isGuessNumInRange(int guessNum, int range) {
         
@@ -17,6 +18,15 @@ public class InputValidator {
             return true;
         }
         return false;
+    }
+
+    public static boolean isNumaric(String guessNumS){
+        try {
+            Integer.parseInt(guessNumS);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }
