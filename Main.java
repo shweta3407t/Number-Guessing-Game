@@ -18,7 +18,12 @@ public class Main {
                         ENTER E -EXITE GAME.
                         """);
                 System.out.print("YOUR CHOICE : ");
-                String choice = sc.next().toLowerCase();
+                String choice = sc.next() ;
+
+                boolean isValide=utils.InputValidator.isString(choice);
+                if(isValide){
+                    System.out.println("..... WRONG OPTION SELECTED.....");
+                 }
 
                 switch (choice) {
                     case "l":
